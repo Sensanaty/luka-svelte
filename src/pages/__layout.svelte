@@ -15,5 +15,9 @@
   }
 
   // Roboto
-  @include fontFamily("Roboto", "../assets/fonts/Roboto/Roboto-Bold", bold)
+  @include fontFamily("Roboto", "../assets/fonts/Roboto/Roboto-Bold", bold);
+
+  // Aeonik
+  @include fontFamily("Aeonik", "../assets/fonts/Aeonik/Aeonik-Bold", bold);
+  @include fontFamily("Aeonik", "../assets/fonts/Aeonik/Aeonik-Medium", 500);
 </style>
