@@ -9,3 +9,5 @@ html, body, #svelte {
 h1, h2, h3, h4, p, a, ul, ul li { margin: 0; padding: 0 }
 
 a { text-decoration: none }
+
+::selection, ::-moz-selection { background: #128A5D; color: #232323 }
