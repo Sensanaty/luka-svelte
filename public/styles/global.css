@@ -1,0 +1,11 @@
+html, body, #svelte {
+  height: 100%;
+  background: #272727;
+  margin: 0;
+  padding: 0;
+  color: #FDFDFD;
+}
+
+h1, h2, h3, h4, p, a, ul, ul li { margin: 0; padding: 0 }
+
+a { text-decoration: none }
