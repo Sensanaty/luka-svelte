@@ -18,6 +18,7 @@ const config = {
       enabled: true
     },
     trailingSlash: "never",
+    host: "0.0.0.0",
     vite: {
       resolve: {
         alias: {
