@@ -27,7 +27,7 @@
     <h1>Looking for a developer for your app?</h1>
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
-    <form name="contact" method="post" action="https://send.pageclip.co/OiCDb8K9nmGrrvdh6VQsuqI9SYECTcfn/lu-ka">
+    <form name="contact" method="post" action="https://send.pageclip.co/OiCDb8K9nmGrrvdh6VQsuqI9SYECTcfn/default">
       <label for="email">Email</label>
       <input name="email" type="email" id="email" placeholder="Email Address" bind:value={form.email}>
 
