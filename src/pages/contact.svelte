@@ -24,7 +24,7 @@
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
     <form name="contact-me" method="post" data-netlify="true" data-netlify-bot-field="honey" netlify>
-      <input type="hidden" name="form-name" value="contact-form">
+      <input type="hidden" name="form-name" value="contact-me">
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="Email Address" bind:value={form.email}>
 
