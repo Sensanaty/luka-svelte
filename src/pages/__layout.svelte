@@ -1,7 +1,5 @@
 <PageTransition refresh="{routeKey}">
   <slot />
-
-  <span class="font-prefetch" role="none"></span>
 </PageTransition>
 
 <script>
@@ -32,19 +30,9 @@
   }
 
   // Roboto
-  @include fontFamily("Roboto", "../assets/fonts/Roboto/Roboto-Bold", bold);
+  @include fontFamily("Roboto", "/fonts/Roboto/Roboto-Bold", bold);
 
   // Aeonik
-  @include fontFamily("Aeonik", "../assets/fonts/Aeonik/Aeonik-Bold", bold);
-  @include fontFamily("Aeonik", "../assets/fonts/Aeonik/Aeonik-Medium", 500);
-
-
-  .font-prefetch {
-    font-family: "Aeonik", "Roboto", serif;
-    position: absolute;
-    top: 0;
-    transform: translateY(-10000%);
-    user-select: none;
-    pointer-events: none;
-  }
+  @include fontFamily("Aeonik", "/fonts/Aeonik/Aeonik-Bold", bold);
+  @include fontFamily("Aeonik", "/fonts/Aeonik/Aeonik-Medium", 500);
 </style>

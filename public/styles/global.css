@@ -6,9 +6,27 @@ html, body, #svelte {
   color: #FDFDFD;
 }
 
+body {
+  font-family: "Roboto", system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
 h1, h2, h3, h4, p, a, ul, ul li { margin: 0; padding: 0 }
 
 a { text-decoration: none }
 
 ::selection { background: #128A5D; color: #232323 }
 ::-moz-selection { background: #128A5D; color: #232323 }
+
+::-webkit-scrollbar { width: 5px }
+::-webkit-scrollbar-track { background: #272727 }
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover { background: yellow }
+
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment,
+::-webkit-scrollbar-corner {
+  width: 0; height: 0;
+}

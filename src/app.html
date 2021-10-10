@@ -7,10 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LUKA</title>
     <meta name="description" content="Luka Salevic, or Sensanaty, is a freelance fullstack web developer skilled in Rails, Vue, React, and much more.">
+    <link rel="preload" href="/fonts/Aeonik/Aeonik-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/Roboto/Roboto-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/Aeonik/Aeonik-Medium.woff2" as="font" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="/styles/global.css">
     %svelte.head%
 	</head>
 	<body>
 		<div id="svelte">%svelte.body%</div>
+    <span class="font-prefetch" role="none" style="font-family: 'Aeonik', 'Roboto', serif; position: absolute; top: 0; transform: translateY(-10000%); user-select: none; pointer-events: none; "></span>
 	</body>
 </html>
