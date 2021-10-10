@@ -1,7 +1,7 @@
 {#key refresh}
   <div
-       out:fade={ { duration: 100, easing: quadInOut } }
-       in:fade={ { duration: 100, easing: quadInOut, delay: 150 } }
+       out:fade={ { duration: 90, easing: quadInOut } }
+       in:fade={ { duration: 90, easing: quadInOut, delay: 100 } }
        on:introstart={ () => document.body.style.overflow = "hidden" }
        on:outroend={ () => document.body.style.overflow = "visible" }
   >
