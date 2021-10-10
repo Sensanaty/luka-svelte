@@ -6,19 +6,19 @@
 <div id="home">
   <div class="box black" id="about">
     <h1>L</h1>
-    <a href="/about" class="link white">ABOUT</a>
+    <a href="/about" class="link white" sveltekit:prefetch>ABOUT</a>
   </div>
   <div class="box white" id="projects">
     <h1>U</h1>
-    <a href="/projects" class="link black">PROJECTS</a>
+    <a href="/projects" class="link black" sveltekit:prefetch>PROJECTS</a>
   </div>
   <div class="box white" id="contact">
     <h1>K</h1>
-    <a href="/contact" class="link black">CONTACT</a>
+    <a href="/contact" class="link black" sveltekit:prefetch>CONTACT</a>
   </div>
   <div class="box black" id="random">
     <h1>A</h1>
-    <a href="/resume" class="white">RESUME</a>
+    <a href="/resume" class="white" sveltekit:prefetch>RESUME</a>
   </div>
 </div>
 

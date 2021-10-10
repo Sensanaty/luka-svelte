@@ -5,9 +5,9 @@
   </div>
 
   <div class="links">
-    <h3><span class="wide">Want to see what I've worked on? </span>See my <a href="/projects" class="small">PROJECTS</a></h3>
-    <h3><span class="wide">Want to talk about doing a project? </span>Get in <a href="/contact" class="small">CONTACT</a></h3>
-    <h3><span class="wide">Wanted to check out my resume? </span>See my <a href="/resume" class="small">RESUME</a></h3>
+    <h3><span class="wide">Want to see what I've worked on? </span>See my <a href="/projects" class="small" sveltekit:prefetch>PROJECTS</a></h3>
+    <h3><span class="wide">Want to talk about doing a project? </span>Get in <a href="/contact" class="small" sveltekit:prefetch>CONTACT</a></h3>
+    <h3><span class="wide">Wanted to check out my resume? </span>See my <a href="/resume" class="small" sveltekit:prefetch>RESUME</a></h3>
   </div>
 </div>
 
