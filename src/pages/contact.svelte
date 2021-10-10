@@ -1,7 +1,3 @@
-<svelte:head>
-  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-</svelte:head>
-
 <div
   id="contact"
   out:fade={{ duration: 100, easing: quadInOut }}
@@ -27,14 +23,14 @@
     <h1>Looking for a developer for your app?</h1>
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
-    <form name="contact" method="post">
+    <form name="contact" method="post" data-netlify="true" data-netlif-bot-field="botnet" netlify>
       <label for="email">Email</label>
       <input name="email" type="email" id="email" placeholder="Email Address" bind:value={form.email}>
 
       <label for="message">Message</label>
       <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={form.message}></textarea>
 
-      <button on:click|preventDefault={sendForm}>Send</button>
+      <button type="submit" on:click|preventDefault={sendForm}>Send</button>
     </form>
   </div>
 </div>
@@ -56,8 +52,8 @@
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&")
   }
 
-  export async function sendForm() {
-    await fetch("/", {
+  export function sendForm() {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
