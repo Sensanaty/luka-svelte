@@ -3,7 +3,13 @@
   <meta name="description" content="Luka Salevic, or Sensanaty, is a freelance fullstack web developer skilled in Rails, Vue, React, and much more.">
 </svelte:head>
 
-<div id="home">
+<div
+  id="home"
+  out:fade={{ duration: 100, easing: quadInOut }}
+  in:fade={{ duration: 100, easing: quadInOut, delay: 100 }}
+  on:introstart={ () => document.body.style.overflow = "hidden" }
+  on:outroend={ () => document.body.style.overflow = "visible" }
+>
   <div class="box black" id="about">
     <h1>L</h1>
     <a href="/about" class="link white" sveltekit:prefetch>ABOUT</a>
@@ -21,6 +27,11 @@
     <a href="/resume" class="white" sveltekit:prefetch>RESUME</a>
   </div>
 </div>
+
+<script>
+  import { fade } from "svelte/transition";
+  import { quadInOut } from "svelte/easing";
+</script>
 
 <style lang="scss">
   #home {

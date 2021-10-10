@@ -1,4 +1,10 @@
-<div id="about">
+<div
+  id="about"
+  out:fade={{ duration: 100, easing: quadInOut }}
+  in:fade={{ duration: 100, easing: quadInOut, delay: 100 }}
+  on:introstart={ () => document.body.style.overflow = "hidden" }
+  on:outroend={ () => document.body.style.overflow = "visible" }
+>
   <div class="hello">
     <h1>Hi, I'm <a href="/" class="big">LUKA</a></h1>
     <h2>I'm a Fullstack Software Developer</h2>
@@ -10,6 +16,12 @@
     <h3><span class="wide">Wanted to check out my resume? </span>See my <a href="/resume" class="small" sveltekit:prefetch>RESUME</a></h3>
   </div>
 </div>
+
+
+<script>
+  import { fade } from "svelte/transition";
+  import { quadInOut } from "svelte/easing";
+</script>
 
 <style lang="scss">
   #about {
