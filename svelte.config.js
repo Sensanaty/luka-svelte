@@ -16,8 +16,7 @@ const config = {
     },
     prerender: {
       enabled: true,
-      crawl: true,
-      force: true
+      crawl: true
     },
     trailingSlash: "never",
     host: "0.0.0.0",
