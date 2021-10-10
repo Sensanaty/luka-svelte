@@ -1,16 +1,6 @@
-<PageTransition refresh="{routeKey}">
-  <slot />
-</PageTransition>
+<Header />
+<slot />
 
 <script>
-  import PageTransition from "@/components/PageTransition.svelte";
-  export let routeKey;
-</script>
-
-<script context="module">
-  export const load = async ({ page }) => ({
-    props: {
-      routeKey: page.path,
-    },
-  })
+  import Header from "@/components/Header.svelte";
 </script>
