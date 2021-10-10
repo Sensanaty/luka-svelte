@@ -34,7 +34,7 @@
       <label for="message">Message</label>
       <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={form.message}></textarea>
 
-      <button type="submit">Send</button>
+      <button on:click|preventDefault={sendForm}>Send</button>
     </form>
   </div>
 </div>
@@ -50,6 +50,23 @@
     email: "",
     message: ""
   };
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&")
+  }
+
+  export async function sendForm() {
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...form
+      })
+    }).then((response) => { console.log("response:", response ) })
+    .catch((error) => { console.log("error:", error) })
+  }
 </script>
 
 <style lang="scss">
