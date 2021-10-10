@@ -23,7 +23,7 @@
     <h1>Looking for a developer for your app?</h1>
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
-    <form name="contact" method="post" data-netlify-bot-field="honey" netlify>
+    <form name="contact" method="post" data-netlify-bot-field="honey" data-netlify="true">
       <input type="hidden" name="form-name" value="contact">
       <label for="email">Email</label>
       <input name="email" type="email" id="email" placeholder="Email Address" bind:value={form.email}>
@@ -48,13 +48,13 @@
     message: ""
   };
 
-  function encode(data: Record<string, unknown>) {
+  function encode(data) {
     return Object.keys(data)
-      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join("&");
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
   }
 
   export function sendMessage(): void {
-    console.log("form:", form);
     fetch("/", {
       method: "POST",
       headers: {
