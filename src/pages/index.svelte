@@ -18,7 +18,7 @@
   </div>
   <div class="box black" id="random">
     <h1>A</h1>
-    <a href="/random" class="white">RANDOM</a>
+    <a href="/resume" class="white">RESUME</a>
   </div>
 </div>
 
