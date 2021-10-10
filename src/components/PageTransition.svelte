@@ -1,7 +1,7 @@
 {#key refresh}
-  <div id="transition-wrapper"
-       out:fade={ { duration: 110, easing: quadInOut } }
-       in:fade={ { duration: 110, easing: quadInOut, delay: 110 } }
+  <div
+       out:fade={ { duration: 100, easing: quadInOut } }
+       in:fade={ { duration: 100, easing: quadInOut, delay: 150 } }
        on:introstart={ () => document.body.style.overflow = "hidden" }
        on:outroend={ () => document.body.style.overflow = "visible" }
   >
@@ -17,7 +17,7 @@
 </script>
 
 <style>
-  #transition-wrapper {
+  div {
     height: 100%;
   }
 </style>

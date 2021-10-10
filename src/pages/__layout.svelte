@@ -1,5 +1,7 @@
 <PageTransition refresh="{routeKey}">
   <slot />
+
+  <span class="font-prefetch" role="none"></span>
 </PageTransition>
 
 <script>
@@ -35,4 +37,14 @@
   // Aeonik
   @include fontFamily("Aeonik", "../assets/fonts/Aeonik/Aeonik-Bold", bold);
   @include fontFamily("Aeonik", "../assets/fonts/Aeonik/Aeonik-Medium", 500);
+
+
+  .font-prefetch {
+    font-family: "Aeonik", "Roboto", serif;
+    position: absolute;
+    top: 0;
+    transform: translateY(-10000%);
+    user-select: none;
+    pointer-events: none;
+  }
 </style>
