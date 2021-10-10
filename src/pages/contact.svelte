@@ -24,11 +24,12 @@
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
     <form name="contact-me" method="post" data-netlify="true" data-netlify-bot-field="honey" netlify>
+      <input type="hidden" name="form-name" value="contact-form">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Email Address" bind:value={email}>
+      <input type="email" id="email" placeholder="Email Address" bind:value={form.email}>
 
       <label for="message">Message</label>
-      <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={message}></textarea>
+      <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={form.message}></textarea>
 
       <button on:click|preventDefault={sendMessage}>Send</button>
     </form>
@@ -42,22 +43,18 @@
   import LinkedinIcon from "@/components/LinkedinIcon.svelte";
   import EmailIcon from "@/components/EmailIcon.svelte";
 
-  export let email = "";
-  export let message = "";
+  export let form = {
+    email: "",
+    message: ""
+  };
 
-  interface FormObject {
-    "form-name": string;
-    email: string;
-    message: string;
-  }
-
-  function encode(data: FormObject) {
+  function encode(data: Record<string, unknown>) {
     return Object.keys(data)
-      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join("&")
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join("&");
   }
 
   export function sendMessage(): void {
+    console.log("form:", form);
     fetch("/", {
       method: "POST",
       headers: {
@@ -65,8 +62,7 @@
       },
       body: encode({
         "form-name": "contact-me",
-        email: email,
-        message: message
+        ...form
       })
     })
     .then(() => {
