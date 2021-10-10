@@ -28,7 +28,7 @@
       <input type="email" id="email" placeholder="Email Address" bind:value={email}>
 
       <label for="message">Message</label>
-      <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={message} on:blur={validMessage}></textarea>
+      <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={message}></textarea>
 
       <button>Send</button>
     </form>
