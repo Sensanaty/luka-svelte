@@ -1,3 +1,7 @@
+<svelte:head>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+</svelte:head>
+
 <div
   id="contact"
   out:fade={{ duration: 100, easing: quadInOut }}
@@ -23,15 +27,14 @@
     <h1>Looking for a developer for your app?</h1>
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
-    <form name="contact" method="post" data-netlify-bot-field="honey" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact">
+    <form name="contact" method="post" action="https://send.pageclip.co/OiCDb8K9nmGrrvdh6VQsuqI9SYECTcfn">
       <label for="email">Email</label>
       <input name="email" type="email" id="email" placeholder="Email Address" bind:value={form.email}>
 
       <label for="message">Message</label>
       <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={form.message}></textarea>
 
-      <button on:click|preventDefault={sendMessage}>Send</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 </div>
@@ -47,29 +50,6 @@
     email: "",
     message: ""
   };
-
-  function encode(data) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
-
-  export function sendMessage(): void {
-    fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: encode({
-        "form-name": "contact",
-        ...form
-      })
-    })
-    .then(() => {
-      console.log("Hooray")
-    })
-    .catch(error => alert(error))
-  }
 </script>
 
 <script context="module">
