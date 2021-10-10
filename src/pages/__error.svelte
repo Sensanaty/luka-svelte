@@ -28,5 +28,5 @@
   @media screen and (max-width: 1200px) { h3 { font-size: 3rem } }
   @media screen and (max-width: 890px) { h3 { font-size: 2rem } }
   @media screen and (max-width: 600px) { h3 { font-size: 1.5rem } }
-  @media screen and (max-width: 445px) { h3 { font-size: 5.5vw } }
+  @media screen and (max-width: 450px) { h3 { font-size: 5.5vw } }
 </style>
