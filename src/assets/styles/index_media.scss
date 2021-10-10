@@ -5,7 +5,7 @@
   #about { grid-template: [letter] 1fr [link] 100px / 3fr [letter] 1fr [link] 100px }
   #projects { grid-template: [letter] 1fr [link] 100px / [link] 100px [letter] 1fr 3fr }
   #contact { grid-template: [link] 100px [letter] 1fr / 3fr [letter] 1fr [link] 100px }
-  #random { grid-template: [link] 100px [letter] 1fr / [link] 100px [letter] 1fr 3fr }
+  #resume { grid-template: [link] 100px [letter] 1fr / [link] 100px [letter] 1fr 3fr }
 }
 
 @media screen and (max-width: 375px) {
@@ -15,7 +15,7 @@
   #about { grid-template: [letter] 1fr [link] 100px / 3fr [letter] 1fr [link] 100px }
   #projects { grid-template: [letter] 1fr [link] 100px / [link] 100px [letter] 1fr 3fr }
   #contact { grid-template: [link] 100px [letter] 1fr / 3fr [letter] 1fr [link] 100px }
-  #random { grid-template: [link] 100px [letter] 1fr / [link] 100px [letter] 1fr 3fr }
+  #resume { grid-template: [link] 100px [letter] 1fr / [link] 100px [letter] 1fr 3fr }
 }
 
 @media screen and (max-width: 340px) {
@@ -25,5 +25,5 @@
   #about { grid-template: [letter] 1fr [link] 90px / 3fr [letter] 1fr [link] 90px }
   #projects { grid-template: [letter] 1fr [link] 90px / [link] 90px [letter] 1fr 3fr }
   #contact { grid-template: [link] 90px [letter] 1fr / 3fr [letter] 1fr [link] 90px }
-  #random { grid-template: [link] 90px [letter] 1fr / [link] 90px [letter] 1fr 3fr }
+  #resume { grid-template: [link] 90px [letter] 1fr / [link] 90px [letter] 1fr 3fr }
 }

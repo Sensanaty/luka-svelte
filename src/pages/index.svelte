@@ -16,7 +16,7 @@
     <h1>K</h1>
     <a href="/contact" class="link black" sveltekit:prefetch>CONTACT</a>
   </div>
-  <div class="box black" id="random">
+  <div class="box black" id="resume">
     <h1>A</h1>
     <a href="/resume" class="white" sveltekit:prefetch>RESUME</a>
   </div>
@@ -58,12 +58,12 @@
   #about { grid-template: [letter] 1fr [link] 130px / 3fr [letter] 1fr [link] 130px }
   #projects { grid-template: [letter] 1fr [link] 130px / [link] 130px [letter] 1fr 3fr }
   #contact { grid-template: [link] 130px [letter] 1fr / 3fr [letter] 1fr [link] 130px }
-  #random { grid-template: [link] 130px [letter] 1fr / [link] 130px [letter] 1fr 3fr }
+  #resume { grid-template: [link] 130px [letter] 1fr / [link] 130px [letter] 1fr 3fr }
 
   #about h1 { align-self: flex-end ; justify-self: flex-start}
   #projects h1 { align-self: flex-end; justify-self: flex-end }
   #contact h1 { align-self: flex-start; justify-self: flex-start }
-  #random h1 { align-self: flex-start; justify-self: flex-end }
+  #resume h1 { align-self: flex-start; justify-self: flex-end }
 
   @import "../assets/styles/index_media";
 </style>
