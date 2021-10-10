@@ -15,7 +15,9 @@ const config = {
       routes: "src/pages"
     },
     prerender: {
-      enabled: true
+      enabled: true,
+      crawl: true,
+      force: true
     },
     trailingSlash: "never",
     host: "0.0.0.0",
