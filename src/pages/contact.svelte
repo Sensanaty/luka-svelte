@@ -23,10 +23,10 @@
     <h1>Looking for a developer for your app?</h1>
     <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
 
-    <form name="contact-me" method="post" data-netlify="true" data-netlify-bot-field="honey" netlify>
-      <input type="hidden" name="form-name" value="contact-me">
+    <form name="contact" method="post" data-netlify-bot-field="honey" netlify>
+      <input type="hidden" name="form-name" value="contact">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Email Address" bind:value={form.email}>
+      <input name="email" type="email" id="email" placeholder="Email Address" bind:value={form.email}>
 
       <label for="message">Message</label>
       <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={form.message}></textarea>
@@ -61,7 +61,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       body: encode({
-        "form-name": "contact-me",
+        "form-name": "contact",
         ...form
       })
     })
