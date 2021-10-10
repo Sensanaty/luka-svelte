@@ -38,8 +38,8 @@ h1, h2, h3, h4, p, a, ul, ul li { margin: 0; padding: 0 }
 
 a { text-decoration: none }
 
-::selection { background: #128A5D; color: #232323 }
-::-moz-selection { background: #128A5D; color: #232323 }
+::selection { background: #FFCA3A; color: #232323 }
+::-moz-selection { background: #FFCA3A; color: #232323 }
 
 ::-webkit-scrollbar { width: 5px }
 ::-webkit-scrollbar-track { background: #272727 }

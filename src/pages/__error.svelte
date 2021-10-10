@@ -15,11 +15,11 @@
   }
 
   a {
-    color: #128A5D;
+    color: #FFCA3A;
     text-decoration: underline transparent;
     transition: all 110ms ease-in-out;
 
-    &:hover { text-decoration: underline #128A5D }
+    &:hover { text-decoration: underline #FFCA3A }
   }
 
   h2 { font-size: 12rem; user-select: none; transform: rotate(90deg) }

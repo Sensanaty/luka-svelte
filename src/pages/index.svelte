@@ -63,7 +63,7 @@
     text-decoration: none;
     transition: all 110ms ease-in-out;
 
-    &:hover { color: #128A5D }
+    &:hover { color: #FFCA3A }
   }
 
   #about { grid-template: [letter] 1fr [link] 130px / 3fr [letter] 1fr [link] 130px }

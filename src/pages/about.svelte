@@ -38,7 +38,7 @@
   h3 { font-size: 2.5rem; font-weight: 500; margin: 20px 0 }
 
   a {
-    color: #128A5D;
+    color: #FFCA3A;
     transition: all 110ms ease-in-out;
     font-family: Roboto, serif;
     background: lighten(#272727, 4);
