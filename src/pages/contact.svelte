@@ -72,6 +72,10 @@
   }
 </script>
 
+<script context="module">
+  export const prerender = true;
+</script>
+
 <style lang="scss">
   #contact {
     font-family: "Aeonik", sans-serif;
