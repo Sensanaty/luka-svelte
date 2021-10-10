@@ -30,7 +30,7 @@
       <label for="message">Message</label>
       <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={message}></textarea>
 
-      <button>Send</button>
+      <button on:click|preventDefault={sendMessage}>Send</button>
     </form>
   </div>
 </div>
