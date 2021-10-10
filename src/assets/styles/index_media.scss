@@ -2,28 +2,28 @@
   h1 { font-size: 7rem }
   a { font-size: 1.1rem }
 
-  #about { grid-template: 1fr [letter] 1fr [link] 100px / 3fr [letter] 1fr [link] 100px }
-  #projects { grid-template: 1fr [letter] 1fr [link] 100px / [link] 100px [letter] 1fr 3fr }
-  #contact { grid-template: [link] 100px [letter] 1fr 1fr / 3fr [letter] 1fr [link] 100px }
-  #random { grid-template: [link] 100px [letter] 1fr 1fr / [link] 100px [letter] 1fr 3fr }
+  #about { grid-template: [letter] 1fr [link] 100px / 3fr [letter] 1fr [link] 100px }
+  #projects { grid-template: [letter] 1fr [link] 100px / [link] 100px [letter] 1fr 3fr }
+  #contact { grid-template: [link] 100px [letter] 1fr / 3fr [letter] 1fr [link] 100px }
+  #random { grid-template: [link] 100px [letter] 1fr / [link] 100px [letter] 1fr 3fr }
 }
 
 @media screen and (max-width: 375px) {
   h1 { font-size: 6rem }
   a { font-size: 1rem }
 
-  #about { grid-template: 1fr [letter] 1fr [link] 100px / 3fr [letter] 1fr [link] 100px }
-  #projects { grid-template: 1fr [letter] 1fr [link] 100px / [link] 100px [letter] 1fr 3fr }
-  #contact { grid-template: [link] 100px [letter] 1fr 1fr / 3fr [letter] 1fr [link] 100px }
-  #random { grid-template: [link] 100px [letter] 1fr 1fr / [link] 100px [letter] 1fr 3fr }
+  #about { grid-template: [letter] 1fr [link] 100px / 3fr [letter] 1fr [link] 100px }
+  #projects { grid-template: [letter] 1fr [link] 100px / [link] 100px [letter] 1fr 3fr }
+  #contact { grid-template: [link] 100px [letter] 1fr / 3fr [letter] 1fr [link] 100px }
+  #random { grid-template: [link] 100px [letter] 1fr / [link] 100px [letter] 1fr 3fr }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 340px) {
   h1 { font-size: 5rem }
   a { font-size: 0.9rem }
 
-  #about { grid-template: 1fr [letter] 1fr [link] 90px / 3fr [letter] 1fr [link] 90px }
-  #projects { grid-template: 1fr [letter] 1fr [link] 90px / [link] 90px [letter] 1fr 3fr }
-  #contact { grid-template: [link] 90px [letter] 1fr 1fr / 3fr [letter] 1fr [link] 90px }
-  #random { grid-template: [link] 90px [letter] 1fr 1fr / [link] 90px [letter] 1fr 3fr }
+  #about { grid-template: [letter] 1fr [link] 90px / 3fr [letter] 1fr [link] 90px }
+  #projects { grid-template: [letter] 1fr [link] 90px / [link] 90px [letter] 1fr 3fr }
+  #contact { grid-template: [link] 90px [letter] 1fr / 3fr [letter] 1fr [link] 90px }
+  #random { grid-template: [link] 90px [letter] 1fr / [link] 90px [letter] 1fr 3fr }
 }

@@ -39,6 +39,7 @@
     font-size: 11rem;
     grid-area: letter;
     text-align: center;
+    line-height: 10.8rem;
   }
 
   a {
@@ -54,12 +55,15 @@
     &:hover { color: #128A5D }
   }
 
-  #about { grid-template: 1fr [letter] 1fr [link] 130px / 3fr [letter] 1fr [link] 130px }
-  #projects { grid-template: 1fr [letter] 1fr [link] 130px / [link] 130px [letter] 1fr 3fr }
-  #contact { grid-template: [link] 130px [letter] 1fr 1fr / 3fr [letter] 1fr [link] 130px }
-  #random { grid-template: [link] 130px [letter] 1fr 1fr / [link] 130px [letter] 1fr 3fr }
-  #about h1, #projects h1 { align-self: flex-end }
-  #contact h1, #random h1 { align-self: flex-start }
+  #about { grid-template: [letter] 1fr [link] 130px / 3fr [letter] 1fr [link] 130px }
+  #projects { grid-template: [letter] 1fr [link] 130px / [link] 130px [letter] 1fr 3fr }
+  #contact { grid-template: [link] 130px [letter] 1fr / 3fr [letter] 1fr [link] 130px }
+  #random { grid-template: [link] 130px [letter] 1fr / [link] 130px [letter] 1fr 3fr }
+
+  #about h1 { align-self: flex-end ; justify-self: flex-start}
+  #projects h1 { align-self: flex-end; justify-self: flex-end }
+  #contact h1 { align-self: flex-start; justify-self: flex-start }
+  #random h1 { align-self: flex-start; justify-self: flex-end }
 
   @import "../assets/styles/index_media";
 </style>
