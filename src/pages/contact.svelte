@@ -53,11 +53,11 @@
   }
 
   export function sendForm() {
-    fetch("/", {
+    fetch("https://lu-ka.me/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "contact",
+        "form-name": "contact-me",
         ...form
       })
     }).then((response) => { console.log("response:", response ) })
