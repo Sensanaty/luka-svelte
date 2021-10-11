@@ -53,7 +53,7 @@
   }
 
   export function sendForm() {
-    fetch("https://lu-ka.me/", {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
