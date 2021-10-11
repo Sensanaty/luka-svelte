@@ -20,52 +20,138 @@
   </div>
 
   <div id="form-area">
-    <h1>Looking for a developer for your app?</h1>
-    <h2>Feel free to send me a message through one of my socials above, or the form below</h2>
+    <h1 class="looking">Looking for a developer for your app?</h1>
+    <h2>Feel free to send me a message through one of my socials above, or via the form below</h2>
 
-    <form name="contact" method="post" data-netlify="true" data-netlif-bot-field="botnet" netlify>
-      <label for="email">Email</label>
-      <input name="email" type="email" id="email" placeholder="Email Address" bind:value={form.email}>
+    {#if !sendStatus || sendStatus === "error"}
+      {#if sendStatus === "error" }
+        <h3 in:fade={{ duration: 100, easing: quadInOut, delay: 100 }} out:fade={{ duration:80, easing: quadInOut }}>
+          Something went wrong, please try again
+        </h3>
+      {/if}
 
-      <label for="message">Message</label>
-      <textarea name="message" id="message" placeholder="What Did You Want To Discuss With Me?" bind:value={form.message}></textarea>
+      <form
+        in:fade={{ duration: 100, easing: quadInOut, delay: 100 }}
+        out:fade={{ duration: 80, easing: quadInOut }}
+        name="contact"
+        method="POST"
+      >
+        <label for="email">Email</label>
+        {#if emailError}
+          <p transition:slide={{ duration: 80, easing: quadInOut }} class="error-text">{emailError}</p>
+        {/if}
+        <input
+          name="email"
+          type="email"
+          on:focus={() => emailError = ""}
+          on:blur={validateEmail}
+          id="email"
+          placeholder="Email Address"
+          class:error={emailError}
+          bind:value={form.email}
+          autocomplete="off"
+        >
 
-      <button type="submit" on:click|preventDefault={sendForm}>Send</button>
-    </form>
+        <label for="message">Message</label>
+        {#if messageError}
+          <p transition:slide={{ duration: 80, easing: quadInOut }} class="error-text">{messageError}</p>
+        {/if}
+        <textarea
+          name="message"
+          on:focus={() => messageError = ""}
+          on:blur={validateMessage}
+          id="message"
+          placeholder="What did you want to discuss with me?"
+          class:error={messageError}
+          bind:value={form.message}
+        ></textarea>
+
+        <button type="submit" on:click|preventDefault={sendForm}>Send</button>
+      </form>
+        {:else if sendStatus === "sending"}
+          <h1
+            in:fade={{ duration: 100, easing: quadInOut, delay: 100 }}
+            out:fade={{ duration: 80, easing: quadInOut }}
+            class="status sending"
+          >
+            Sending the message
+          </h1>
+
+        {:else if sendStatus === "sent"}
+          <h1
+            in:fade={{ duration: 100, easing: quadInOut, delay: 100 }}
+            out:fade={{ duration: 80, easing: quadInOut }}
+            class="status sent"
+          >
+            Sent!
+          </h1>
+        {/if}
   </div>
 </div>
 
-<script context="module">
-  export const prerender = false;
-</script>
-
 <script>
-  import { fade } from "svelte/transition";
+  import { fade, slide } from "svelte/transition";
   import { quadInOut } from "svelte/easing";
   import GithubIcon from "@/components/GithubIcon.svelte";
   import LinkedinIcon from "@/components/LinkedinIcon.svelte";
   import EmailIcon from "@/components/EmailIcon.svelte";
 
-  export let form = {
-    email: "",
-    message: ""
-  };
+  export let form = { email: "", message: "" };
+  export let emailError = "";
+  export let messageError = "";
+  export let sendStatus = null;
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&")
+  export function validateEmail() {
+    const emailRegex = /.+@.+\..+/;
+
+    if (form.email && emailRegex.test(form.email)) {
+      emailError = "";
+      return true;
+    } else if (!form.email) {
+      emailError = "Please provide your email address";
+      return false;
+    } else if (!emailRegex.test(form.email)) {
+      emailError = "The email you entered wasn't valid";
+      return false;
+    }
   }
 
-  export function sendForm() {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact-me",
-        ...form
+  export function validateMessage() {
+    messageError = "";
+
+    if (!form.message) {
+      messageError = "Please provide a message"
+      return false;
+    } else return true;
+  }
+
+  function validateForm() {
+    const validEmail = validateEmail();
+    const validMessage = validateMessage();
+
+    return !!validEmail && !!validMessage;
+  }
+
+  export async function sendForm() {
+    if (validateForm()) {
+      sendStatus = "sending";
+
+      await fetch("https://formspree.io/myylvapw", {
+        method: "POST",
+        body: JSON.stringify({
+          email: form.email,
+          message: form.message
+        }),
+        headers: { "Accept": "application/json" }
+      }).then(() => {
+        sendStatus = "sent";
       })
-    }).then((response) => { console.log("response:", response ) })
-    .catch((error) => { console.log("error:", error) })
+        .catch((err) => {
+          sendStatus = "error";
+          console.log("err:", err.response);
+        });
+    }
+
   }
 </script>
 
@@ -87,9 +173,7 @@
     margin-bottom: 60px
   }
 
-  .icon {
-    height: 100%;
-  }
+  .icon { height: 100% }
 
   :global(svg) {
     fill: #FFCA3A;
@@ -97,9 +181,7 @@
     width: auto;
     transition: all 110ms ease-in-out;
 
-    &:hover {
-      transform: translateY(2px);
-    }
+    &:hover { transform: translateY(2px) }
   }
 
   #form-area, form {
@@ -119,9 +201,7 @@
     margin-bottom: 30px;
   }
 
-  form {
-    width: 50%;
-  }
+  form { width: 50% }
 
   label {
     font-size: 2rem;
@@ -140,6 +220,8 @@
     font-family: "Aeonik", sans-serif;
 
     &:focus { outline: 1px solid #FFCA3A }
+
+    &.error { outline: 2px solid red }
   }
 
   input {
@@ -175,5 +257,9 @@
     &:hover { background: #373737 }
     &:active { transform: translateY(2px) }
   }
+
+  .status { text-align: center }
+  h3 { font-size: 1.5rem; margin-bottom: 20px }
+  .error-text { color: red; font-weight: bold; font-size: 1.2rem; margin: 0 0 25px 0 }
 </style>
 
