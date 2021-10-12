@@ -8,7 +8,7 @@
   out:fade={{ duration: 100, easing: quadInOut }}
   in:fade={{ duration: 100, easing: quadInOut, delay: 100 }}
   on:introstart={ () => document.body.style.overflow = "hidden" }
-  on:outroend={ () => document.body.style.overflow = "visible" }
+  on:outroend={ () => setTimeout(() => { document.body.style.overflow = "visible" }, 100 )}
 >
   <div class="box black" id="about">
     <h1>L</h1>

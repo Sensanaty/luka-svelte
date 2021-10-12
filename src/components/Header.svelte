@@ -2,7 +2,7 @@
   <nav in:slide={ { duration: 120, easing: quadInOut } }
        out:slide={ { duration: 80, easing: quadInOut } }
        on:introstart={ () => document.body.style.overflow = "hidden" }
-       on:outroend={ () => document.body.style.overflow = "visible" }
+       on:outroend={ () => setTimeout(() => { document.body.style.overflow = "visible" }, 100 )}
   >
     <a href="/" sveltekit:prefetch>LUKA</a>
     <a class:active="{$page.path === '/projects'}" href="/projects" sveltekit:prefetch>PROJECTS</a>
