@@ -1,0 +1,24 @@
+@import "fonts.css";
+
+* {
+  transition: background var(--std-transition), color var(--std-transition);
+  font-family: "MonoLisa", monospace;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--cl);
+}
+
+a {
+  color: var(--cl);
+  text-decoration: solid underline 3px var(--accent);
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--cl);
+}
+
+h1, h2, h3, p { margin: 0; padding: 0; }
