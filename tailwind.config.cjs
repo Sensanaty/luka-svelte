@@ -4,15 +4,11 @@ const config = {
   theme: {
     extend: {
       colors: {
-        'bg': '#212121',
-        'bg-highlight': '#323031',
-        'cl': '#FDFDFD',
+        'bg': 'var(--bg)',
+        'bg-highlight': 'var(--bg-highlight)',
+        'cl': 'var(--cl)',
         'accent': "#FF9F1C",
         'ruby': "#EF3054",
-
-        'bg-light': '#EDE7D9',
-        'bg-highlight-light': '#FDFDFD',
-        'cl-light': '#222222'
       },
     },
   },
