@@ -5,7 +5,7 @@
 
   onMount(() => {
     theme = document.documentElement.classList.contains("light") ? "light" : "dark";
-  })
+  });
 
   const toggleTheme = () => {
     document.documentElement.classList.toggle("light");
@@ -16,7 +16,7 @@
       window.localStorage.setItem("theme", "dark");
       theme = "dark";
     }
-  }
+  };
 </script>
 
 <template>
