@@ -29,6 +29,7 @@
   "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
   "main": "svelte.config.js",
   "dependencies": {
+    "@types/node": "^20.1.2",
     "eslint-scope": "^7.2.0",
     "eslint-visitor-keys": "^3.4.1",
     "svelte-eslint-parser": "^0.27.0"
