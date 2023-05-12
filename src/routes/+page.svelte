@@ -26,7 +26,7 @@
   };
 </script>
 
-<div class="flex flex-col items-center justify-center bg-highlight w-max mx-auto mb-6 p-7 h-min">
+<div class="header flex flex-col items-center justify-center lg:w-full overflow-auto bg-highlight mx-auto mb-6 p-7 h-min">
   <h1 class="text-3xl font-black mb-10">
     <!--  eslint-disable-next-line quotes  -->
     hi there, i'm <span class="luka relative text-accent text-4xl z-10 luka">Luka</span>
@@ -37,15 +37,17 @@
   </h2>
 </div>
 
-<div class="flex flex-col items-center justify-center w-max mx-auto font-bold text-lg">
+<div class="body flex flex-col items-center justify-center font-boldtext-lg">
   <p class="flex items-center mb-3">
-    i love building cool stuff, especially with
-    <span class="text-ruby flex">
-      <img src="/images/ruby.svg" class="mx-2" width="15" aria-hidden="true" alt=""> ruby
-    </span>
-    &nbsp;and
-    <span class="text-accent flex">
-      <img src="/images/javascript.svg" class="mx-2" width="15" aria-hidden="true" alt=""> javascript
+    i love building cool stuff<span class="especially">, especially</span>&nbsp;with
+    <span class="flex">
+      <span class="text-ruby flex">
+        <img src="/images/ruby.svg" class="mx-2" width="15" aria-hidden="true" alt=""> ruby
+      </span>
+      &nbsp;and
+      <span class="text-accent flex">
+        <img src="/images/javascript.svg" class="mx-2" width="15" aria-hidden="true" alt=""> javascript
+      </span>
     </span>
   </p>
 
@@ -53,8 +55,8 @@
   <p class="mb-3">if you'd like to chat with me and find out more, feel free to reach me down below</p>
 </div>
 
-<div class="relative flex items-center mx-auto text-accent font-black h-max w-max">
-  <p class="self-start bg-highlight px-4 py-3 text-2xl">salevic@lu-ka.me</p>
+<div class="email relative flex items-center mx-auto text-accent font-black h-max">
+  <h3 class="self-start bg-highlight px-4 py-3 text-2xl">salevic@lu-ka.me</h3>
 
   <button
     on:click={copy}
@@ -69,15 +71,4 @@
   {/if}
 </div>
 
-<style>
-  .luka {
-    text-shadow: 1px 1px 1px black,
-    1px 2px 1px black,
-    1px 3px 1px black,
-    1px 4px 1px black;
-  }
-
-  .notification {
-    right: -80px
-  }
-</style>
+<style src="./+page.css"></style>

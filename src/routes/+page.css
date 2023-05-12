@@ -1,0 +1,58 @@
+
+.luka {
+  text-shadow: 1px 1px 1px black,
+  1px 2px 1px black,
+  1px 3px 1px black,
+  1px 4px 1px black;
+}
+
+.notification {
+  right: -80px
+}
+
+@media screen and (max-width: 1100px) {
+  h2 { @apply text-xl; }
+}
+
+@media screen and (max-width: 950px) {
+  p { @apply text-base; }
+  h2 { @apply text-lg text-center; }
+  .body { @apply text-center; }
+}
+
+@media screen and (max-width: 840px) {
+  .header { @apply p-2; }
+  p { @apply text-[0.9rem] mb-5; }
+  h3 { @apply text-xl; }
+}
+
+@media screen and (max-width: 645px) {
+  .especially { @apply hidden; }
+}
+
+@media screen and (max-width: 545px) {
+  p:first-child { @apply flex-col; }
+}
+
+@media screen and (max-width: 470px) {
+  .notification {
+    right: 0;
+    top: 60px
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header { @apply px-0 pt-3 pb-5; }
+  h1 { @apply text-2xl mb-4; }
+  .luka { @apply text-2xl; }
+}
+
+@media screen and (max-width: 390px) {
+  h1 { @apply text-xl; }
+  h2 { @apply text-base; }
+  h3 { @apply text-base; }
+}
+
+@media screen and (max-width: 330px) {
+  button { @apply hidden; }
+}

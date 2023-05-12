@@ -17,7 +17,7 @@
     <Header />
 
     {#key data.url}
-      <div in:fade={{ duration: 100, delay: 101 }} out:fade={{ duration: 100 }} class="flex flex-col overflow-auto mx-7 my-6">
+      <div in:fade={{ duration: 100, delay: 101 }} out:fade={{ duration: 100 }} class="slot-wrapper flex flex-col mx-7 my-6">
         <slot />
       </div>
     {/key}
@@ -29,5 +29,9 @@
 <style>
   .wrapper {
     grid-template: auto 1fr auto / 1fr;
+  }
+
+  @media screen and (max-width: 430px) {
+    .slot-wrapper { @apply mx-1; }
   }
 </style>

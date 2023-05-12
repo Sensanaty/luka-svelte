@@ -36,4 +36,17 @@
 
   .ibeam { animation: blinker 1250ms step-start infinite }
   @keyframes blinker { 50% { opacity: 0 } }
+
+  @media screen and (max-width: 630px) {
+    header { grid-template: 1fr / auto min-content; }
+  }
+
+  @media screen and (max-width: 445px) {
+    header {
+      @apply text-base;
+      grid-template: 1fr 1fr / 1fr;
+    }
+
+    a { @apply decoration-2 mt-1; }
+  }
 </style>

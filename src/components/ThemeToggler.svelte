@@ -27,3 +27,9 @@
     { theme }
   </button>
 </template>
+
+<style>
+  @media screen and (max-width: 630px) {
+    button { @apply hidden; }
+  }
+</style>

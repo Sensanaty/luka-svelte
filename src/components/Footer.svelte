@@ -3,7 +3,7 @@
 
   let monkey;
   let shouldAnimate;
-  let showTooltip = false;
+  let showTooltip = true;
   let disableText;
   $: disableText = shouldAnimate ? "click me to disable the animation!" : "click me to enable the animation!";
 
@@ -80,5 +80,13 @@
     50% { transform: rotate(0deg) }
     75% { transform: rotate(-41deg) }
     100% { transform: rotate(0deg) }
+  }
+
+  @media screen and (max-width: 650px) {
+    span { @apply hidden; }
+  }
+
+  @media screen and (max-width: 400px) {
+    a { @apply text-sm; }
   }
 </style>
