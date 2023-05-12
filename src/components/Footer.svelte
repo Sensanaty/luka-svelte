@@ -28,6 +28,7 @@
 
   const handleEnter = (event: KeyboardEvent) => {
     if (event.key === "Enter") {
+      event.preventDefault();
       toggleAnimation();
     }
   };
