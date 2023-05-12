@@ -4,7 +4,7 @@
   let monkey;
   let shouldAnimate;
   let showTooltip = false;
-  let disableText = "";
+  let disableText;
   $: disableText = shouldAnimate ? "click me to disable the animation!" : "click me to enable the animation!";
 
   onMount(() => {
