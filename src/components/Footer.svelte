@@ -3,7 +3,7 @@
 
   let monkey;
   let shouldAnimate;
-  let showTooltip = true;
+  let showTooltip = false;
   let disableText;
   $: disableText = shouldAnimate ? "click me to disable the animation!" : "click me to enable the animation!";
 
