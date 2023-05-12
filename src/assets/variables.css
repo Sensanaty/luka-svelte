@@ -1,6 +1,6 @@
 :root {
   --bg: #212121;
-  --bg-highlight: #323031;
+  --highlight: #323031;
   --cl: #FDFDFD;
   --shadow: inset rgba(0, 0, 0, 0.2) 0 1px 3px, inset rgba(0, 0, 0, 0.2) 0 1px 2px;
 
@@ -10,7 +10,7 @@
 
 :root.light {
   --bg: #EDE7D9;
-  --bg-highlight: #FDFDFD;
+  --highlight: #FDFDFD;
   --cl: #222222;
   --shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }

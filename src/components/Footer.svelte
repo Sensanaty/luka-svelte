@@ -34,7 +34,7 @@
 </script>
 
 <template>
-  <footer class="grid flex-wrap items-center bg-bg-highlight w-full py-2 px-5 text-lg font-bold">
+  <footer class="grid flex-wrap items-center bg-highlight w-full py-2 px-5 text-lg font-bold">
     <div
       class="flex flex-row items-center text-sm select-none"
     >

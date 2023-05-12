@@ -5,7 +5,7 @@ const config = {
     extend: {
       colors: {
         'bg': 'var(--bg)',
-        'bg-highlight': 'var(--bg-highlight)',
+        'highlight': 'var(--highlight)',
         'cl': 'var(--cl)',
         'accent': "#FF9F1C",
         'ruby': "#EF3054",
