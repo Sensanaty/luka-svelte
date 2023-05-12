@@ -50,7 +50,7 @@
           bind:this={monkey}
           class="h-6 cursor-pointer mr-1 animate"
           src="/favicon/android-chrome-192x192.png"
-          alt="A pixelated cartoon monkey face rotating periodically. Luka uses this as his profile picture anywhere he has one."
+          alt="A pixelated cartoon monkey face rotating around its center left and right"
       ></button>
       {#if showTooltip}
         <span class="text-accent dark:text-black">{ disableText }</span>
