@@ -5,3 +5,5 @@ export const load: Load = (params) => {
 };
 
 export const prerender = true;
+export const ssr = false;
+
