@@ -1,5 +1,10 @@
 <script>
-import ThemeToggler from "@/components/ThemeToggler.svelte";
+  import ThemeToggler from "@/components/ThemeToggler.svelte";
+  import { page } from "$app/stores";
+
+  let path;
+
+  $: path = $page.url.pathname;
 </script>
 
 <template>
@@ -9,9 +14,11 @@ import ThemeToggler from "@/components/ThemeToggler.svelte";
     </h1>
 
     <nav class="flex items-center">
-      <a class="text-base h-min mx-1" href="/">home</a>
-      <a class="text-base h-min mx-1" href="/resume">resume</a>
-      <a class="text-base h-min mx-1" href="/shenanigans">shenanigans</a>
+      <!--  eslint-disable quotes -->
+      <a class="{path === '/' ? 'active' : ''} text-base h-min mx-1" href="/">home</a>
+      <a class="{path === '/resume' ? 'active' : ''} text-base h-min mx-1" href="/resume">resume</a>
+      <a class="{path === '/shenanigans' ? 'active' : ''} text-base h-min mx-1" href="/shenanigans">shenanigans</a>
+      <!--  eslint-enable quotes -->
     </nav>
 
     <ThemeToggler />
@@ -21,6 +28,10 @@ import ThemeToggler from "@/components/ThemeToggler.svelte";
 <style>
   header {
     grid-template: 1fr / 1fr min-content 1fr;
+  }
+
+  .active {
+    @apply text-accent no-underline;
   }
 
   .ibeam { animation: blinker 1250ms step-start infinite }
