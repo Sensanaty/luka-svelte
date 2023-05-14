@@ -16,8 +16,7 @@
     <nav class="flex items-center">
       <!--  eslint-disable quotes -->
       <a class="{path === '/' ? 'active' : ''} text-base h-min mx-1" href="/">home</a>
-      <a class="{path === '/resume' ? 'active' : ''} text-base h-min mx-1" href="/resume">resume</a>
-      <a class="{path === '/shenanigans' ? 'active' : ''} text-base h-min mx-1" href="/shenanigans">shenanigans</a>
+      <a class="{new RegExp(/\/shenanigans\/?.*/).test(path) ? 'active' : ''} text-base h-min mx-1" href="/shenanigans">shenanigans</a>
       <!--  eslint-enable quotes -->
     </nav>
 
