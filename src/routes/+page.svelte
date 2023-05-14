@@ -26,7 +26,7 @@
   };
 </script>
 
-<div class="header flex flex-col items-center justify-center lg:w-full overflow-auto bg-highlight mx-auto mb-6 p-7 h-min">
+<div class="header flex flex-col items-center justify-center overflow-auto bg-highlight mx-auto mb-6 p-7 h-min lg:w-max">
   <h1 class="text-3xl font-black mb-10">
     <!--  eslint-disable-next-line quotes  -->
     hi there, i'm <span class="luka relative text-accent text-4xl z-10 luka">Luka</span>
