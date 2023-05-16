@@ -12,10 +12,20 @@
     collection of fun stuff done to expand my knowledge in one way or another
   </h1>
 
-  <div class="grid grid-cols-3 gap-2 gap-y-5 w-full">
+  <div class="grid-area grid grid-cols-3 gap-2 gap-y-5 w-full">
     {#each shenanigans as shenanigan}
       <ShenaniganCard title={shenanigan.title} subtitle={shenanigan.subtitle} route={shenanigan.route} />
     {/each}
   </div>
 </div>
+
+<style>
+  @media screen and (max-width: 800px) {
+    .grid-area { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media screen and (max-width: 545px) {
+    .grid-area { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  }
+</style>
 
