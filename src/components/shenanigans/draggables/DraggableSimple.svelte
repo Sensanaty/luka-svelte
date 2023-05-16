@@ -1,8 +1,18 @@
 <script lang="ts">
   function draggable(node: HTMLElement) {
     let moving = false;
-    let top = 60;
+    let top = 0;
     let left = 0;
+
+    if (window.matchMedia("(max-width: 755px)").matches) {
+      top = 180;
+    } else if (window.matchMedia("(max-width: 910px)").matches) {
+      top = 120;
+    } else if (window.matchMedia("(max-width: 1185px)").matches) {
+      top = 100;
+    } else {
+      top = 80;
+    }
 
     node.style.top = `${top}px`;
 
@@ -28,6 +38,6 @@
 </script>
 
 
-<div use:draggable class="absolute border-2 border-transparent bg-highlight w-max cursor-grab mx-auto p-3">
+<div use:draggable class="absolute select-none border-2 border-transparent bg-highlight w-max cursor-grab mx-auto p-3">
   <h2 class="font-black">drag me!</h2>
 </div>

@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col">
-  <div class="mb-4 pb-1 border-b-2 border-accent w-max">
+  <div class="mb-4 pb-1 border-b-2 border-accent lg:w-max">
     <h1 class="text-3xl font-black">Window Dragging In Svelte</h1>
   </div>
 
