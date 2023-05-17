@@ -4,7 +4,9 @@
   font-family: "JetBrains Mono NL", monospace;
 }
 
-h1, h2, h3, p, button, div, span { transition: color var(--std-transition), background var(--std-transition) }
+h1, h2, h3, p, div, span { transition: color var(--std-transition), background var(--std-transition) }
+
+button { transition: color var(--std-transition), background var(--std-transition), border-left-color var(--std-transition) }
 
 html, body {
   height: 100%;
