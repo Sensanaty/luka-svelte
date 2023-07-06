@@ -1,5 +1,19 @@
 <script lang="ts">
+  import Divider from "@/components/Divider.svelte";
   import Infobox from "@/components/Infobox.svelte";
+
+  let loadedExamples = {
+    basic: false,
+  };
+
+  let shownExamples = {
+    basic: false,
+  };
+
+  const toggleExample = (item) => {
+    loadedExamples[item] = true;
+    shownExamples[item] = !shownExamples[item];
+  };
 </script>
 
 <div class="flex flex-col">
@@ -12,12 +26,40 @@
   </p>
 
   <Infobox
-    text="All examples below are loaded asynchronously to save on bandwith, so just click on the button to load the relevant example"
+    text="All examples below are loaded asynchronously to save on bandwith & decrease load times, so just click on the button to load the relevant example"
   />
+
+  <Divider class="mb-4" />
+
+  <button class="bg-highlight w-fit px-4 py-3 mb-4 hover:bg-zinc-800 dark:hover:bg-amber-50" on:click={() => toggleExample("basic")}>
+    Basic Example
+  </button>
+
+  {#if loadedExamples.basic && shownExamples.basic}
+    {#await import("@/components/shenanigans/three/BasicExample.svelte")}
+      <img src="/favicon/android-chrome-192x192.png" height="40" width="40" class="spinner" alt="Loading Spinner">
+    {:then component}
+      <svelte:component this={component.default} />
+    {/await}
+  {/if}
 </div>
 
 <style>
   .title-box {
     @apply mb-4 pb-1 border-b-2 border-accent border-dotted text-3xl font-black;
+  }
+
+  .spinner {
+    animation: spin 1000ms ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+  }
+
+  .spinner {
+    transform: rotate(360deg);
   }
 </style>

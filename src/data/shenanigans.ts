@@ -6,7 +6,7 @@ const list = [
   },
   {
     title: "Experimenting with three.js",
-    subtitle: "playing around with three.js and seeing what I can accomplish",
+    subtitle: "playing around with three.js and seeing what kind of things I can do with it",
     route: "threejs",
   },
 ];
