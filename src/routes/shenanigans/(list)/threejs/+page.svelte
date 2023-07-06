@@ -12,7 +12,7 @@
   </p>
 
   <Infobox
-    text="All examples below are loaded asynchronously to save bandwith, so just click on the button to load the relevant example"
+    text="All examples below are loaded asynchronously to save on bandwith, so just click on the button to load the relevant example"
   />
 </div>
 
