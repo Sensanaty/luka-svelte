@@ -22,7 +22,7 @@
   </div>
 
   <p class="leading-7 mb-4">
-    <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> is a really cool library that lets you create interactive 3D scenes in the browser. I've always had an interest in 3D-related things, so I thought why not give it a try to do it myself?
+    <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> is a really cool library that lets you create interactive 3D scenes in the browser. I've always had an interest in 3D-related things, so I thought why not give it a try myself?
   </p>
 
   <Infobox
