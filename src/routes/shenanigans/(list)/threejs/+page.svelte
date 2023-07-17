@@ -38,7 +38,7 @@
 
   <Divider class="mb-4" />
 
-  <button class="activate-button hover:bg-zinc-800 dark:hover:bg-amber-50" on:click={() => toggleExample("basic")}>
+  <button class="activate-button" on:click={() => toggleExample("basic")}>
     Basic Example
   </button>
 
@@ -51,7 +51,7 @@
   {/if}
 
 
-  <button class="activate-button hover:bg-zinc-800 dark:hover:bg-amber-50" on:click={() => toggleExample("geometry")}>
+  <button class="activate-button" on:click={() => toggleExample("geometry")}>
     Geometry Example
   </button>
 
@@ -66,7 +66,7 @@
 
 <style>
   .activate-button {
-    @apply bg-highlight w-fit px-4 py-3 mb-4;
+    @apply bg-highlight w-fit px-4 py-3 mb-4 hover:bg-zinc-800 dark:hover:bg-amber-50;
   }
 
   .title-box {
