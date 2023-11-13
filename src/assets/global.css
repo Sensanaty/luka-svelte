@@ -1,7 +1,7 @@
 @import "fonts.css";
 
 * {
-  font-family: "JetBrains Mono NL", monospace;
+  font-family: "Commit Mono", monospace;
 }
 
 h1, h2, h3, p, div, span { transition: color var(--std-transition), background var(--std-transition) }
