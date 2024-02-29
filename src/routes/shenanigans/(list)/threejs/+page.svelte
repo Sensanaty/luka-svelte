@@ -17,7 +17,7 @@
     geometry: false,
   };
 
-  const toggleExample = (item) => {
+  const toggleExample = (item: keyof Examples) => {
     loadedExamples[item] = true;
     shownExamples[item] = !shownExamples[item];
   };
